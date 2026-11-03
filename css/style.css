@@ -1,0 +1,148 @@
+/* Mapping the Impact of AI through Data — main stylesheet
+   Fonts: Roboto Slab (titles/headings), Fira Sans (text) — per course requirements
+   Colors inspired by the UniGe visual identity (id.unige.it) */
+
+:root {
+  --unige-blue: #002677;
+  --unige-blue-light: #e6ebf5;
+  --accent: #ffa83f;
+  --text: #222222;
+  --muted: #5b6270;
+  --bg: #ffffff;
+  --max-width: 960px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Fira Sans", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Slab", Georgia, serif;
+  line-height: 1.25;
+  color: var(--unige-blue);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header */
+.site-header {
+  background: var(--unige-blue);
+  color: #ffffff;
+  padding: 3.5rem 0 2.5rem;
+}
+
+.site-header h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.course {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+/* Navigation */
+.site-nav {
+  background: var(--unige-blue-light);
+  border-bottom: 3px solid var(--accent);
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.75rem 0;
+  color: var(--unige-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  padding: 2rem 1.25rem 3rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--unige-blue-light);
+  padding-bottom: 0.3rem;
+}
+
+a {
+  color: var(--unige-blue);
+}
+
+.sources li {
+  margin-bottom: 0.6rem;
+}
+
+.placeholder {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* SVG elements — styled via selectors only (no inline styling) */
+svg .bar {
+  fill: var(--unige-blue);
+}
+
+svg .bar:hover {
+  fill: var(--accent);
+}
+
+svg .axis text {
+  font-family: "Fira Sans", Arial, sans-serif;
+  font-size: 0.8rem;
+  fill: var(--muted);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--unige-blue);
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 1.25rem 0;
+}
